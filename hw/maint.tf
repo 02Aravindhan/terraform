@@ -21,7 +21,7 @@ resource "azurerm_virtual_network" "vnet" {
   location = data.azurerm_resource_group.rg.location
 
   dynamic "subnet"{
-    for_each = each.value.subnet
+    for_each = each.value.subnets
 
   content {
        name           = subnet.value.name
